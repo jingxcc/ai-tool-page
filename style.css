@@ -2,48 +2,129 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
@@ -55,49 +136,50 @@ a {
   text-decoration: none;
 }
 
-/* body {
-  margin: 40px auto;
-} */
-.container{
+.container {
   width: 1296px;
-  display: flex;
-  justify-content: center;
-  /* margin-top: 40px; */
   margin: 40px auto;
+}
+
+span.icon {
+  display: block;
+  color: #020202;
 }
 
 .tool-list {
   display: flex;
   justify-content: space-between;
-  /* justify-content: center; */
+  align-items: center;
   flex-wrap: wrap;
-  font-family: "Noto Sans TC";
+
+  /* basic */
   color: #020202;
+  font-family: "Noto Sans TC";
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  align-items: center;
 }
 
 .tool-card {
-  border: 1px solid #f2f2f2;
   width: 416px;
+  height: 558px;
+  border: 1px solid #f2f2f2;
   margin-bottom: 24px;
-  /* height: 558px; */
   display: flex;
   flex-direction: column;
 }
 
 .tool-card .image {
+  height: 312px;
   overflow: hidden;
-  border-radius: 16px 16px 0 0
+  border-radius: 16px 16px 0 0;
 }
 
 .tool-card .image img {
-  /* 如果圖片大小不同，height/width則一設定？ */
-  /* height: 312px;  */
-  max-width: 100%;
-  max-height: 100%;
+  /* 如果圖片大小不同，height/width 設定 */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: flex;
   border-radius: 16px 16px 0 0;
 
@@ -109,21 +191,21 @@ a {
 }
 
 .tool-intro {
-  height: 118px;
+  /* height: 118px; */
   border-top: 1px solid #f2f2f2;
   padding: 20px 32px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-grow: 1;
 }
 
-.tool-intro p{
+.tool-intro p {
   margin-top: 12px;
   color: #525252;
-  
 }
 
-.tool-block{
+.tool-info {
   border-top: 1px solid #f2f2f2;
   padding: 20px 32px;
   display: flex;
@@ -150,7 +232,10 @@ a {
   font-weight: 700;
 }
 
-.color-black {
-  color: #020202;
+.font-black {
+  font-weight: 900;
 }
 
+/* .color-black {
+  color: #020202;
+} */
