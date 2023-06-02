@@ -148,7 +148,7 @@ a {
   text-decoration: none;
 }
 
-span.icon-black {
+/* span.icon-black {
   display: block;
   color: #020202;
 }
@@ -156,7 +156,7 @@ span.icon-black {
 span.icon-white {
   display: block;
   color: #fff;
-}
+} */
 
 /* tool */
 .container-tool {
@@ -300,6 +300,7 @@ span.icon-white {
 
   color: #fff;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /* footer */
@@ -393,6 +394,8 @@ span.icon-white {
   /* align-self: flex-end; */
   align-items: center;
   gap: 12px;
+
+  cursor: pointer;
 }
 
 .footer-go-top .material-icons {
@@ -483,4 +486,9 @@ span.icon-white {
 
 .bg-white {
   background-color: #fff;
+}
+
+/* tmp before bootstrap */
+.d-flex {
+  display: flex;
 }

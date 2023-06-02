@@ -1,8 +1,5 @@
-$("#goToTop").on("click", (e) => {
-  $("html,body").animate(
-    {
-      scrollTop: 0,
-    },
-    800
-  );
+$(document).ready(function () {
+  $("#scrollToTop").on("click", (e) => {
+    $("html,body").animate({ scrollTop: 0 }, 500);
+  });
 });
