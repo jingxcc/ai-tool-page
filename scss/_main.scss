@@ -99,7 +99,7 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
-  outline: 1px solid orange;
+  // outline: 1px solid orange;
 }
 
 img {
@@ -162,6 +162,7 @@ a {
   }
 
   .comment-card {
+    height: 400px;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -172,6 +173,23 @@ a {
     .comment-shot {
       max-width: 48px;
     }
+  }
+
+  .swiper-pagination {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    background-color: $color-black-80;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
   }
 }
 
@@ -227,9 +245,32 @@ a {
 }
 
 @media (max-width: 992px) {
+  .partner {
+    .partner-comment {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  .partner {
+    padding-bottom: 120px;
+    .partner-logo {
+      margin-bottom: 48px;
+    }
+
+    .partner-title {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .comment-card {
+      padding: 20px;
+      height: auto;
+      margin-right: 20px;
+    }
+  }
 }
 
 /* tool */
@@ -565,4 +606,9 @@ a {
 }
 
 @media (max-width: 767px) {
+}
+
+.swiper2 {
+  width: 600px;
+  height: 300px;
 }
