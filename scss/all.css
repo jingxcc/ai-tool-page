@@ -190,6 +190,10 @@ span.text-base {
   font-size: 24px;
 }
 
+.text-32 {
+  font-size: 32px;
+}
+
 .text-48 {
   font-size: 48px;
 }
@@ -232,6 +236,7 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
+  outline: 1px solid orange;
 }
 
 img {
@@ -267,6 +272,46 @@ a {
 @media (max-width: 992px) {
   .container {
     max-width: 696px;
+  }
+}
+/* service */
+.service {
+  color: #fff;
+}
+.service h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+.service .service-title {
+  margin-bottom: 80px;
+}
+.service .service-intro {
+  margin-bottom: 160px;
+}
+.service .service-card {
+  padding: 80px 40px;
+  border: 1px solid #525252;
+  border-radius: 16px;
+}
+.service .service-card * {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .service .service-intro {
+    gap: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .service .service-title {
+    margin-bottom: 48px;
+  }
+  .service .service-title h3 {
+    font-size: 20px;
+  }
+  .service .service-title p {
+    font-size: 32px;
   }
 }
 /* partner */
