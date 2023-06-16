@@ -202,6 +202,10 @@ span.text-base {
   font-size: 80px;
 }
 
+.text-120 {
+  font-size: 120px;
+}
+
 .color-black {
   color: #020202;
 }
@@ -269,15 +273,91 @@ a {
   background-color: #fff;
 }
 
+.logo {
+  max-width: 250px;
+}
+.logo img {
+  display: block;
+}
+
+.call-to-action button, .head button {
+  max-width: 188px;
+  max-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  gap: 10px;
+}
+
 @media (max-width: 992px) {
   .container {
     max-width: 696px;
+  }
+}
+/* head */
+.head {
+  color: #fff;
+}
+.head a {
+  color: #fff;
+}
+.head .header {
+  padding: 20px 0px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #fff;
+}
+.head .nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+.head .nav-item-icon {
+  display: none;
+}
+.head button {
+  margin-bottom: 100px;
+  padding: 20px 40px;
+  width: 160px;
+  color: #fff;
+  background-color: transparent;
+}
+.head .head-deco {
+  width: 180px;
+}
+
+@media (max-width: 767px) {
+  .head .header {
+    padding: 28px 0px;
+    margin-bottom: 40px;
+  }
+  .head .header .nav-item {
+    display: none;
+  }
+  .head .header .nav-item-icon {
+    display: block;
+  }
+  .head .logo {
+    width: 148px;
+  }
+  .head .head-intro {
+    font-size: 48px;
+  }
+  .head .head-graph {
+    margin-bottom: 120px;
+  }
+  .head .head-deco {
+    width: auto;
   }
 }
 /* service */
 .service {
   color: #fff;
 }
+.service h2,
 .service h3 {
   font-size: 32px;
   line-height: 1.2;
@@ -307,7 +387,7 @@ a {
   .service .service-title {
     margin-bottom: 48px;
   }
-  .service .service-title h3 {
+  .service .service-title h2 {
     font-size: 20px;
   }
   .service .service-title p {
@@ -592,15 +672,6 @@ a {
   line-height: 1.2;
 }
 .call-to-action button {
-  max-width: 188px;
-  max-height: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 32px;
-  border: 1px solid #fff;
-  border-radius: 16px;
-  gap: 10px;
   color: #fff;
   background-color: transparent;
   cursor: pointer;
@@ -636,8 +707,6 @@ a {
   color: #fff;
 }
 .footer-menu .logo {
-  max-width: 250px;
-  display: block;
   order: 1;
 }
 

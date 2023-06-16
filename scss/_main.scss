@@ -67,6 +67,10 @@ span.text-base {
   font-size: 80px;
 }
 
+.text-120 {
+  font-size: 120px;
+}
+
 .color-black {
   color: $color-black;
 }
@@ -137,6 +141,25 @@ a {
   background-color: #fff;
 }
 
+.logo {
+  max-width: 250px;
+  img {
+    display: block;
+  }
+}
+
+%button-shared {
+  max-width: 188px;
+  max-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  gap: 10px;
+}
+
 @media (max-width: 992px) {
   .container {
     max-width: 696px;
@@ -149,10 +172,86 @@ a {
   // }
 }
 
+/* head */
+.head {
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  .header {
+    padding: 20px 0px;
+    margin-bottom: 40px;
+
+    border-bottom: 1px solid #fff;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-weight: 700;
+  }
+  .nav-item-icon {
+    display: none;
+  }
+
+  button {
+    @extend %button-shared;
+    margin-bottom: 100px;
+    padding: 20px 40px;
+    width: 160px;
+
+    color: #fff;
+    background-color: transparent;
+    // cursor: pointer;
+  }
+
+  .head-deco {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .head {
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    .header {
+      padding: 28px 0px;
+      margin-bottom: 40px;
+
+      .nav-item {
+        display: none;
+      }
+      .nav-item-icon {
+        display: block;
+      }
+    }
+    .logo {
+      width: 148px;
+    }
+
+    .head-intro {
+      font-size: 48px;
+    }
+    .head-graph {
+      margin-bottom: 120px;
+    }
+    .head-deco {
+      width: auto;
+    }
+  }
+}
+
 /* service */
 .service {
   color: #fff;
 
+  h2,
   h3 {
     font-size: 32px;
     line-height: 1.2;
@@ -190,7 +289,7 @@ a {
   .service {
     .service-title {
       margin-bottom: 48px;
-      h3 {
+      h2 {
         font-size: 20px;
       }
       p {
@@ -532,15 +631,7 @@ a {
   line-height: 1.2;
 
   button {
-    max-width: 188px;
-    max-height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 32px;
-    border: 1px solid #fff;
-    border-radius: 16px;
-    gap: 10px;
+    @extend %button-shared;
 
     color: #fff;
     background-color: transparent;
@@ -583,8 +674,6 @@ a {
   }
 
   .logo {
-    max-width: 250px;
-    display: block;
     order: 1;
   }
 }
