@@ -1,4 +1,8 @@
 // defined class
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .mb-24 {
   margin-bottom: 24px;
 }
@@ -71,6 +75,10 @@ span.text-base {
   color: #919191;
 }
 
+.color-black-20 {
+  color: #f2f2f2;
+}
+
 .color-white {
   color: #fff;
 }
@@ -83,7 +91,7 @@ body {
   /* basic */
   color: $color-black;
   font-size: $font-base;
-  font-weight: 400;
+  font-weight: $font-w-base;
   line-height: 1.5;
 }
 
@@ -91,7 +99,7 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
-  // outline: 1px solid orange;
+  outline: 1px solid orange;
 }
 
 img {
@@ -137,6 +145,93 @@ a {
   // }
 }
 
+/* partner */
+.partner {
+  color: #fff;
+  padding-bottom: 160px;
+
+  .partner-title {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  .comment-star,
+  .comment-card p {
+    margin-bottom: 20px;
+  }
+
+  .comment-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+    background-color: rgb(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    .comment-shot {
+      max-width: 48px;
+    }
+  }
+}
+
+.partner-logo-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-x: scroll;
+
+  /* 隱藏 x 軸 */
+  /* for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* for IE, Edge, and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: sticky;
+    width: 160px;
+    height: 40px;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 0, 0, 1),
+      rgb(0, 0, 0, 0.5),
+      rgb(0, 0, 0, 0.3)
+    );
+  }
+  &::before {
+    left: 0;
+    padding-left: 160px;
+  }
+  &::after {
+    right: 0;
+    padding-right: 160px;
+    transform: rotate(180deg);
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  img {
+    // width: 160px;
+    height: 40px;
+    max-width: initial; /* initial value is the w/h specified */
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {
+}
+
 /* tool */
 .tool-bg {
   max-width: 100%;
@@ -162,7 +257,20 @@ a {
 }
 
 .tool-option {
+  display: flex;
+  align-items: center;
+
+  overflow-x: scroll;
   gap: 8px;
+
+  /* 隱藏 x 軸 */
+  /* for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* for IE, Edge, and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   .option-link {
     display: block;
@@ -246,7 +354,7 @@ a {
 
 .tool-pagination .pagination {
   justify-content: flex-end;
-  --bs-pagination-color: #020202;
+  --bs-pagination-color: $color-black;
   --bs-pagination-border-color: #fff;
   gap: 4px;
 
@@ -270,8 +378,11 @@ a {
     text-align: center;
   }
   .active .page-link {
+    // $color-black 失效
+    // --bs-pagination-active-bg: $color-black;
     --bs-pagination-active-bg: #020202;
     --bs-pagination-active-color: #fff;
+    border: none;
   }
 }
 
@@ -281,18 +392,22 @@ a {
   }
   .tool-title {
     font-size: 48px;
+    margin-bottom: 32px;
   }
+  .tool-search {
+    margin-bottom: 16px;
+  }
+
   .tool-nav {
     flex-wrap: wrap;
     .tool-filter {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
     .tool-order {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .tool-option {
-      overflow: hidden;
       order: 1;
     }
   }

@@ -134,6 +134,10 @@ table {
   border-spacing: 0;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .mb-24 {
   margin-bottom: 24px;
 }
@@ -206,6 +210,10 @@ span.text-base {
   color: #919191;
 }
 
+.color-black-20 {
+  color: #f2f2f2;
+}
+
 .color-white {
   color: #fff;
 }
@@ -224,6 +232,7 @@ body {
 *::after,
 *::before {
   box-sizing: border-box;
+  outline: 1px solid orange;
 }
 
 img {
@@ -261,6 +270,69 @@ a {
     max-width: 696px;
   }
 }
+/* partner */
+.partner {
+  color: #fff;
+  padding-bottom: 160px;
+}
+.partner .partner-title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.5;
+}
+.partner .comment-star,
+.partner .comment-card p {
+  margin-bottom: 20px;
+}
+.partner .comment-card {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+.partner .comment-card .comment-shot {
+  max-width: 48px;
+}
+
+.partner-logo-row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-x: scroll;
+  /* 隱藏 x 軸 */
+  /* for Chrome, Safari and Opera */
+  /* for IE, Edge, and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.partner-logo-row::-webkit-scrollbar {
+  display: none;
+}
+.partner-logo-row::before, .partner-logo-row::after {
+  content: "";
+  position: sticky;
+  width: 160px;
+  height: 40px;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+}
+.partner-logo-row::before {
+  left: 0;
+  padding-left: 160px;
+}
+.partner-logo-row::after {
+  right: 0;
+  padding-right: 160px;
+  transform: rotate(180deg);
+}
+.partner-logo-row li:not(:last-child) {
+  margin-right: 20px;
+}
+.partner-logo-row img {
+  height: 40px;
+  max-width: initial; /* initial value is the w/h specified */
+}
+
 /* tool */
 .tool-bg {
   max-width: 100%;
@@ -284,7 +356,18 @@ a {
 }
 
 .tool-option {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
   gap: 8px;
+  /* 隱藏 x 軸 */
+  /* for Chrome, Safari and Opera */
+  /* for IE, Edge, and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tool-option::-webkit-scrollbar {
+  display: none;
 }
 .tool-option .option-link {
   display: block;
@@ -305,7 +388,6 @@ a {
 .tool-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 .tool-list .tool-card {
@@ -328,7 +410,7 @@ a {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   display: flex;
   border-radius: 16px 16px 0 0;
   transition: 0.5s ease;
@@ -357,7 +439,7 @@ a {
 
 .tool-pagination .pagination {
   justify-content: flex-end;
-  --bs-pagination-color: #020202;
+  --bs-pagination-color: $color-black;
   --bs-pagination-border-color: #fff;
   gap: 4px;
   font-size: 14px;
@@ -381,6 +463,7 @@ a {
 .tool-pagination .pagination .active .page-link {
   --bs-pagination-active-bg: #020202;
   --bs-pagination-active-color: #fff;
+  border: none;
 }
 
 @media (max-width: 992px) {
@@ -389,18 +472,21 @@ a {
   }
   .tool-title {
     font-size: 48px;
+    margin-bottom: 32px;
+  }
+  .tool-search {
+    margin-bottom: 16px;
   }
   .tool-nav {
     flex-wrap: wrap;
   }
   .tool-nav .tool-filter {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .tool-nav .tool-order {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .tool-nav .tool-option {
-    overflow: hidden;
     order: 1;
   }
   .tool-list {
@@ -525,4 +611,4 @@ a {
   .footer-go-top {
     order: 1;
   }
-} /*# sourceMappingURL=all.css.map */
+}/*# sourceMappingURL=all.css.map */
