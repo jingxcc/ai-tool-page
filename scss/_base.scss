@@ -1,0 +1,44 @@
+body {
+  color: #fff;
+  background-color: $bg-color-black;
+  /* add sans-serif for different device */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: $font-base;
+  font-weight: $font-w-base;
+  line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  // outline: 1px solid orange;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+/* Bootstrap */
+.row,
+.row * {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1296px;
+  /* Bootstrap */
+  margin: 0 auto;
+}

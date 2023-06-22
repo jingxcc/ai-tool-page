@@ -1,4 +1,96 @@
 @charset "UTF-8";
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.line-h-120 {
+  line-height: 1.2;
+}
+
+.line-h-150 {
+  line-height: 1.5;
+}
+
+.font-w-700 {
+  font-weight: 700;
+}
+
+.font-w-900 {
+  font-weight: 900;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-base {
+  font-size: 16px;
+}
+
+span.text-base {
+  font-size: 16px;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-48 {
+  font-size: 48px;
+}
+
+.text-80 {
+  font-size: 80px;
+}
+
+.text-120 {
+  font-size: 120px;
+}
+
+.color-black {
+  color: #020202;
+}
+
+.color-black-80 {
+  color: #525252;
+}
+
+.color-black-60 {
+  color: #919191;
+}
+
+.color-black-20 {
+  color: #f2f2f2;
+}
+
+.color-white {
+  color: #fff;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,103 +226,11 @@ table {
   border-spacing: 0;
 }
 
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.mb-24 {
-  margin-bottom: 24px;
-}
-
-.mb-40 {
-  margin-bottom: 40px;
-}
-
-.mb-80 {
-  margin-bottom: 80px;
-}
-
-.mb-160 {
-  margin-bottom: 160px;
-}
-
-.line-h-120 {
-  line-height: 1.2;
-}
-
-.line-h-150 {
-  line-height: 1.5;
-}
-
-.font-w-700 {
-  font-weight: 700;
-}
-
-.font-w-900 {
-  font-weight: 900;
-}
-
-.text-14 {
-  font-size: 14px;
-}
-
-.text-base {
-  font-size: 16px;
-}
-
-span.text-base {
-  font-size: 16px;
-}
-
-.text-20 {
-  font-size: 20px;
-}
-
-.text-24 {
-  font-size: 24px;
-}
-
-.text-32 {
-  font-size: 32px;
-}
-
-.text-48 {
-  font-size: 48px;
-}
-
-.text-80 {
-  font-size: 80px;
-}
-
-.text-120 {
-  font-size: 120px;
-}
-
-.color-black {
-  color: #020202;
-}
-
-.color-black-80 {
-  color: #525252;
-}
-
-.color-black-60 {
-  color: #919191;
-}
-
-.color-black-20 {
-  color: #f2f2f2;
-}
-
-.color-white {
-  color: #fff;
-}
-
 body {
+  color: #fff;
   background-color: #1e1e1e;
-  font-family: "Noto Sans TC";
-  /* basic */
-  color: #020202;
+  /* add sans-serif for different device */
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -249,7 +249,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #020202;
+  color: #fff;
 }
 
 button {
@@ -270,19 +270,18 @@ button {
   margin: 0 auto;
 }
 
-.icon-btn {
-  padding: 20px 24px 20px 40px;
-  border: 1px solid #f2f2f2;
-  gap: 16px;
-  border-radius: 16px;
-  background-color: #fff;
-}
-
 .logo {
   max-width: 250px;
 }
 .logo img {
   display: block;
+}
+
+.icon-btn {
+  padding: 20px 24px 20px 40px;
+  border: 1px solid #f2f2f2;
+  gap: 16px;
+  border-radius: 16px;
 }
 
 .call-to-action button, .head .head-start-btn {
@@ -292,22 +291,13 @@ button {
   align-items: center;
   padding: 20px 32px;
   border: 1px solid #fff;
-  border-radius: 16px;
   gap: 10px;
+  border-radius: 16px;
+  color: #fff;
+  background-color: transparent;
 }
 
-@media (max-width: 992px) {
-  .container {
-    max-width: 696px;
-  }
-}
 /* head */
-.head {
-  color: #fff;
-}
-.head a {
-  color: #fff;
-}
 .head .header {
   position: relative;
   display: flex;
@@ -343,8 +333,6 @@ button {
 .head .head-start-btn {
   margin-bottom: 100px;
   padding: 20px 40px;
-  color: #fff;
-  background-color: transparent;
   font-size: 20px;
 }
 .head .head-deco {
@@ -376,9 +364,6 @@ button {
   }
 }
 /* service */
-.service {
-  color: #fff;
-}
 .service h2,
 .service h3 {
   font-size: 32px;
@@ -418,13 +403,11 @@ button {
 }
 /* partner */
 .partner {
-  color: #fff;
   padding-bottom: 160px;
 }
 .partner .partner-title {
   font-weight: 900;
   font-size: 32px;
-  line-height: 1.5;
 }
 .partner .comment-star,
 .partner .comment-card p {
@@ -525,7 +508,11 @@ button {
   border-radius: 160px;
   padding-top: 160px;
   padding-bottom: 160px;
+  color: #020202;
   background-color: #fff;
+}
+.tool-bg a {
+  color: #020202;
 }
 
 .tool-search {
@@ -563,7 +550,6 @@ button {
   width: -moz-max-content;
   width: max-content;
   color: #919191;
-  background-color: #fff;
 }
 .tool-option .option-link-active {
   color: #020202;
@@ -628,7 +614,6 @@ button {
   transform: scale(1.2);
 }
 .tool-list .tool-intro {
-  /* height: 118px; */
   border-top: 1px solid #f2f2f2;
   padding: 20px 32px;
   flex-direction: column;
@@ -712,15 +697,8 @@ button {
   /* basic */
   text-align: center;
   font-size: 48px;
-  color: #fff;
   line-height: 1.2;
 }
-.call-to-action button {
-  color: #fff;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 @media (max-width: 992px) {
   .call-to-action {
     font-size: 32px;
@@ -748,7 +726,6 @@ button {
   font-size: 80px;
   font-weight: 900;
   line-height: 1.2;
-  color: #fff;
 }
 .footer-menu .logo {
   order: 1;
@@ -773,14 +750,9 @@ button {
   border-top: 1px solid #fff;
   /* basic */
   font-weight: 700;
-  line-height: 1.5;
-  color: #fff;
 }
 .footer-info a {
-  font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
-  color: #fff;
 }
 .footer-info ul {
   display: flex;
@@ -808,8 +780,4 @@ button {
   .footer-go-top {
     order: 1;
   }
-}
-.swiper2 {
-  width: 600px;
-  height: 300px;
 }/*# sourceMappingURL=all.css.map */
