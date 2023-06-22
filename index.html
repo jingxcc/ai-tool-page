@@ -44,14 +44,14 @@
   <body>
     <!-- head -->
     <div class="container">
-      <div class="head">
-        <div class="header row">
+      <div class="head">  
+        <div class="header">
           <h1 class="logo"><a href="#"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png" alt="AI 工具王"></a></h1>
-          <div class="nav col justify-content-end gap-">
-            <span class="nav-item"><a href="#">首頁</a></span>
-            <span class="nav-item"><a href="#">定價</a></span>
-            <span class="nav-item-icon material-icons text-24 color-white"><a href="#">menu</a></span>
-          </div>
+          <button class="nav-btn"><span class="material-icons text-24 color-white d-block">menu</span></button>
+          <ul class="nav-menu">
+            <li class="nav-item"><a class="d-block" href="#">首頁</a></li>
+            <li class="nav-item"><a class="d-block" href="./price/price.html">定價</a></li>
+          </ul>
         </div>
         <div class="head-intro text-120 line-h-120 font-w-900 mb-40">
           <h3>透過</h3>
@@ -59,7 +59,8 @@
           <h3>強大模型</h3>
           <h3>讓您的業務更聰明</h3>
         </div>
-        <button><a href="#">開始使用</a></button>
+        <!-- <button><a class="d-block" href="#">開始使用</a></button> -->
+        <button type="button" class="head-start-btn" onClick="location.href='#'" >開始使用</button>
         <div class="head-graph d-flex justify-content-end mb-160">
           <div class="head-deco"><img class="d-block" src="./img/deco.png" alt="head-deco"></div>
           <div class="head-deco"><img class="d-block" src="./img/deco.png" alt="head-deco"></div>
@@ -120,11 +121,10 @@
         </div>
         
         <!-- swiper: main container -->
+        <div class="swiper">
           <!-- swiper-wrapper: additional required swiper-wrapper -->
-            <!-- swiper-slide: slides -->
-          <!-- swiper-pagination -->
-          <div class="swiper">
-            <div class="partner-comment swiper-wrapper">
+          <div class="partner-comment swiper-wrapper">
+              <!-- swiper-slide: slides -->
                 <div class="comment-card swiper-slide">
                   <div class="comment-star d-flex gap-1">
                     <span class="material-icons text-base color-white">star</span>
@@ -183,6 +183,7 @@
                   </div>
                 </div>
             </div>
+            <!-- swiper-pagination -->
             <div class="swiper-pagination"></div>
           </div>
       </section>
@@ -192,7 +193,6 @@
     <section class="tool-bg mb-80">
       <div class="container">
         <h2 class="tool-title text-80 font-w-900 line-h-120 mb-80 text-center">這些超酷的應用，都來自 AI工具王</h2>
-        <!-- <div class="tool-search"><span></span><span></span></div> -->
         <div class="tool-search d-flex align-items-center  mb-40"> 
           <span class="material-icons text-base color-black-60">search</span>
           <input class="color-black-60" type="text" placeholder="輸入關鍵字搜尋">
@@ -212,10 +212,16 @@
             <li class="option-tag"><a class="option-link" href="#">客服</a></li>
             <li class="option-tag"><a class="option-link" href="#">生產力</a></li>
           </ul>
-          <button class="tool-order icon-btn d-flex align-items-center">
-            <span>由新到舊</span>
-            <span class="material-icons text-base color-black">keyboard_arrow_down</span>
-          </button>
+          <div class="tool-order tool-dropdown">
+            <button class="tool-dropdown-btn icon-btn d-flex align-items-center">
+              <span class="tool-dropdown-btn-text">由新到舊</span>
+              <span class="material-icons text-base color-black">keyboard_arrow_down</span>
+            </button>
+            <ul class="tool-dropdown-menu d-none">
+              <li class="tool-dropdown-item"><a class="" href="#">由新到舊</a></li>
+              <li class="tool-dropdown-item"><a class="" href="#">由舊到新</a></li>
+            </ul>
+          </div>
         </div>
 
         <ul class="tool-list mb-3">
@@ -226,7 +232,6 @@
                   src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/tool1.png?raw=true"
                   alt="tool-1"
                 />
-                <!-- <img src="../1-HTML elements/img/cat.png" alt="test-cat" /> -->
               </div>
             </a>
             <div class="tool-intro">
@@ -384,11 +389,6 @@
         
         <nav class="tool-pagination" aria-label="tool-pagination">
           <ul class="pagination">
-            <!-- <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li> -->
             <li class="page-item active"><a class="page-link" href="#"><span class="d-block">1</span></a></li>
             <li class="page-item"><a class="page-link" href="#"><span class="d-block">2</span></a></li>
             <li class="page-item"><a class="page-link" href="#"><span class="d-block">3</span></a></li>
@@ -462,7 +462,7 @@
     </div>
 
 
-</body>
+  </body> 
 </html>
 
 

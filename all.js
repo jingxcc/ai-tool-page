@@ -22,4 +22,31 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  // menu
+  $(".nav-btn").click(function (e) {
+    const defaultButton = "menu";
+    const changeButton = "close";
+    e.preventDefault();
+    $(".nav-menu").toggleClass("show");
+    $(this)
+      .find("span")
+      .text(
+        $(this).find("span").text() === defaultButton
+          ? changeButton
+          : defaultButton
+      );
+  });
+
+  // dropdown
+  $(".tool-dropdown").click((e) => {
+    e.preventDefault();
+    $(".tool-dropdown-menu").toggleClass("d-none");
+  });
+
+  $(".tool-dropdown-item").click(function (e) {
+    e.preventDefault();
+    const selectedItem = $(this).text();
+    $(".tool-dropdown-btn-text").text(selectedItem);
+  });
 });

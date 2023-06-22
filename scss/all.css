@@ -249,6 +249,12 @@ img {
 
 a {
   text-decoration: none;
+  color: #020202;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
 }
 
 /* Bootstrap */
@@ -279,9 +285,8 @@ a {
   display: block;
 }
 
-.call-to-action button, .head button {
-  max-width: 188px;
-  max-height: 64px;
+.call-to-action button, .head .head-start-btn {
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,25 +309,43 @@ a {
   color: #fff;
 }
 .head .header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px 0px;
   margin-bottom: 40px;
   border-bottom: 1px solid #fff;
 }
-.head .nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-weight: 700;
-}
-.head .nav-item-icon {
+.head .nav-btn {
   display: none;
 }
-.head button {
+.head .nav-menu {
+  display: flex;
+  gap: 20px;
+}
+.head .nav-menu.show {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: calc(100vh - 83px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1.2;
+  background-color: #1e1e1e;
+}
+.head .head-start-btn {
   margin-bottom: 100px;
   padding: 20px 40px;
-  width: 160px;
   color: #fff;
   background-color: transparent;
+  font-size: 20px;
 }
 .head .head-deco {
   width: 180px;
@@ -333,11 +356,11 @@ a {
     padding: 28px 0px;
     margin-bottom: 40px;
   }
-  .head .header .nav-item {
-    display: none;
-  }
-  .head .header .nav-item-icon {
+  .head .nav-btn {
     display: block;
+  }
+  .head .nav-menu {
+    display: none;
   }
   .head .logo {
     width: 148px;
@@ -548,6 +571,29 @@ a {
   background-color: #f2f2f2;
 }
 
+.tool-order {
+  position: relative;
+}
+.tool-order .tool-dropdown-menu {
+  padding: 20px 0px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+}
+.tool-order .tool-dropdown-menu li:hover {
+  background-color: #f2f2f2;
+}
+.tool-order .tool-dropdown-menu li,
+.tool-order .tool-dropdown-menu a {
+  display: block;
+}
+.tool-order .tool-dropdown-menu a {
+  padding: 4px 40px;
+}
+
 .tool-list {
   display: flex;
   justify-content: space-between;
@@ -666,7 +712,6 @@ a {
   /* basic */
   text-align: center;
   font-size: 48px;
-  background-color: #1e1e1e;
   color: #fff;
   line-height: 1.2;
 }

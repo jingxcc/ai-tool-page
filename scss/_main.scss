@@ -93,7 +93,7 @@ span.text-base {
 
 // body
 body {
-  background-color: #1e1e1e;
+  background-color: $b-color-black;
   font-family: "Noto Sans TC";
 
   /* basic */
@@ -117,6 +117,12 @@ img {
 
 a {
   text-decoration: none;
+  color: $color-black;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
 }
 
 /* Bootstrap */
@@ -149,8 +155,7 @@ a {
 }
 
 %button-shared {
-  max-width: 188px;
-  max-height: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,30 +186,51 @@ a {
   }
 
   .header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 0px;
     margin-bottom: 40px;
 
     border-bottom: 1px solid #fff;
   }
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 
-    font-weight: 700;
-  }
-  .nav-item-icon {
+  .nav-btn {
     display: none;
   }
 
-  button {
+  .nav-menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-menu.show {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: calc(100vh - 83px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.2;
+    background-color: $b-color-black;
+  }
+
+  .head-start-btn {
     @extend %button-shared;
     margin-bottom: 100px;
     padding: 20px 40px;
-    width: 160px;
 
     color: #fff;
     background-color: transparent;
+    font-size: 20px;
     // cursor: pointer;
   }
 
@@ -214,8 +240,8 @@ a {
 }
 
 @media (max-width: 992px) {
-  .head {
-  }
+  // .head {
+  // }
 }
 
 @media (max-width: 767px) {
@@ -223,14 +249,15 @@ a {
     .header {
       padding: 28px 0px;
       margin-bottom: 40px;
-
-      .nav-item {
-        display: none;
-      }
-      .nav-item-icon {
-        display: block;
-      }
     }
+    .nav-btn {
+      display: block;
+    }
+
+    .nav-menu {
+      display: none;
+    }
+
     .logo {
       width: 148px;
     }
@@ -485,6 +512,34 @@ a {
   }
 }
 
+.tool-order {
+  position: relative;
+
+  .tool-dropdown-menu {
+    padding: 20px 0px;
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgb(0, 0, 0, 0.15);
+    border-radius: 16px;
+
+    li:hover {
+      background-color: $color-black-20;
+    }
+
+    li,
+    a {
+      display: block;
+    }
+    a {
+      padding: 4px 40px;
+    }
+  }
+}
+
 .tool-list {
   display: flex;
   justify-content: space-between;
@@ -626,7 +681,6 @@ a {
   /* basic */
   text-align: center;
   font-size: 48px;
-  background-color: #1e1e1e;
   color: #fff;
   line-height: 1.2;
 
