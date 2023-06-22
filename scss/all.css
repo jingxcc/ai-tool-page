@@ -255,6 +255,8 @@ a {
 button {
   background-color: transparent;
   border: 0;
+  /* for Apple */
+  color: #fff;
 }
 
 /* Bootstrap */
@@ -282,6 +284,7 @@ button {
   border: 1px solid #f2f2f2;
   gap: 16px;
   border-radius: 16px;
+  color: #020202;
 }
 
 .call-to-action button, .head .head-start-btn {
@@ -293,7 +296,6 @@ button {
   border: 1px solid #fff;
   gap: 10px;
   border-radius: 16px;
-  color: #fff;
   background-color: transparent;
 }
 
